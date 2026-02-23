@@ -92,6 +92,25 @@ export default function Hero() {
                         Transform concepts into professional high-performance interfaces instantly.
                         Automated data mapping, structural precision, and one-click ZIP packaging.
                     </motion.p>
+
+                    {/* Left-Aligned Stats */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="flex gap-12 border-t border-white/5 pt-12"
+                    >
+                        <div className="text-left">
+                            <div className="text-3xl font-black text-white">2k+</div>
+                            <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mt-2">Active Sites</div>
+                        </div>
+                        <div className="text-left">
+                            <div className="text-3xl font-black text-white">0.4s</div>
+                            <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mt-2">Load Speed</div>
+                        </div>
+                        <div className="text-left">
+                            <div className="text-3xl font-black text-white">99%</div>
+                            <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mt-2">Client Rank</div>
+                        </div>
+                    </motion.div>
                 </motion.div>
 
                 {/* New Visual Component with Buttons */}
@@ -128,26 +147,7 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            {/* Bottom Floating Stats */}
-            <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 1 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-20 glass-card px-10 py-4 rounded-3xl border-white/5 hidden md:flex"
-            >
-                <div className="text-center">
-                    <div className="text-2xl font-bold text-white">2k+</div>
-                    <div className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Active Sites</div>
-                </div>
-                <div className="text-center">
-                    <div className="text-2xl font-bold text-white">0.4s</div>
-                    <div className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Load Speed</div>
-                </div>
-                <div className="text-center">
-                    <div className="text-2xl font-bold text-white">99%</div>
-                    <div className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Client Rank</div>
-                </div>
-            </motion.div>
+
         </div>
     );
 }
