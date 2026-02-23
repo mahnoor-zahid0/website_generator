@@ -87,6 +87,6 @@ export default function TemplateGrid({ templates }) {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

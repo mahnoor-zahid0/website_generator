@@ -61,7 +61,7 @@ export default function HomePage() {
         </VirtualSection>
 
         {/* Templates Grid with Parallax */}
-        <VirtualSection className="py-24" type="zoom">
+        <VirtualSection className="py-12" type="zoom">
           <div className="w-full">
             {isLoading ? (
               <div className="text-center py-12">
