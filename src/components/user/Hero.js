@@ -153,8 +153,5 @@ export default function Hero() {
                 </Link>
             </motion.div>
         </div>
-
-
-        </div >
     );
 }
