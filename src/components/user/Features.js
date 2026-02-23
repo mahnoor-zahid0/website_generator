@@ -70,11 +70,16 @@ export default function Features() {
                     {tiers.map((tier, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 60, rotateY: 20, z: -100 }}
+                            whileInView={{ opacity: 1, y: 0, rotateY: 0, z: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
-                            whileHover={{ y: -10 }}
+                            transition={{
+                                type: "tween",
+                                ease: "easeOut",
+                                duration: 1.2,
+                                delay: idx * 0.1
+                            }}
+                            whileHover={{ y: -10, rotateX: 5, z: 20 }}
                             className={`group relative p-10 rounded-[40px] glass-card transition-all duration-500 ${tier.highlight
                                 ? 'border-accent-cyan/30 bg-accent-cyan/[0.03] shadow-[0_0_80px_rgba(34,211,238,0.1)]'
                                 : 'border-white/5 hover:border-white/20'

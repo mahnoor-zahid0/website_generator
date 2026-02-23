@@ -15,15 +15,16 @@ export default function Hero() {
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 40, rotateX: 15, z: -100 },
         visible: {
             opacity: 1,
             y: 0,
+            rotateX: 0,
+            z: 0,
             transition: {
-                type: "spring",
-                stiffness: 70,
-                damping: 15,
-                mass: 0.5
+                type: "tween",
+                ease: "easeOut",
+                duration: 1.5
             }
         }
     };
@@ -100,7 +101,8 @@ export default function Hero() {
             <motion.div
                 variants={containerVariants}
                 initial="hidden"
-                animate="visible"
+                whileInView="visible"
+                viewport={{ once: true }}
                 className="relative z-10 w-full max-w-7xl mx-auto px-6 mt-20"
             >
                 <motion.div

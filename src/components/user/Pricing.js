@@ -49,11 +49,18 @@ export default function Pricing() {
                     {plans.map((plan, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 80, rotateX: 20, z: -150 }}
                             whileInView={{
                                 opacity: 1,
                                 y: 0,
-                                transition: { delay: idx * 0.1 }
+                                rotateX: 0,
+                                z: 0
+                            }}
+                            transition={{
+                                type: "tween",
+                                ease: "easeOut",
+                                duration: 1.5,
+                                delay: idx * 0.1
                             }}
                             animate={{
                                 y: [0, -10, 0],

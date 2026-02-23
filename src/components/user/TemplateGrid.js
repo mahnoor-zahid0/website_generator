@@ -32,13 +32,13 @@ export default function TemplateGrid({ templates }) {
                     {templates.map((template, idx) => (
                         <motion.div
                             key={template.id}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 100, rotateX: 15, z: -200 }}
+                            whileInView={{ opacity: 1, y: 0, rotateX: 0, z: 0 }}
                             viewport={{ once: true }}
                             transition={{
-                                type: "spring",
-                                stiffness: 70,
-                                damping: 15,
+                                type: "tween",
+                                ease: "easeOut",
+                                duration: 1.4,
                                 delay: idx * 0.1
                             }}
                             className="group relative glass-card rounded-[40px] overflow-hidden border-white/5 hover:border-accent-cyan/30 transition-all duration-700 hover:shadow-[0_20px_80px_rgba(0,0,0,0.5)]"

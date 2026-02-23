@@ -56,10 +56,15 @@ export default function HowItWorks() {
                     {steps.map((step, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, y: 40, rotateY: -15, z: -50 }}
+                            whileInView={{ opacity: 1, y: 0, rotateY: 0, z: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: idx * 0.2 }}
+                            transition={{
+                                type: "tween",
+                                ease: "easeOut",
+                                duration: 1.5,
+                                delay: idx * 0.2
+                            }}
                             className="relative group text-center"
                         >
                             <div className="relative mb-10 inline-block">
