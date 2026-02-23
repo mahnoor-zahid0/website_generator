@@ -107,7 +107,7 @@ export default function Pricing() {
                             <Link
                                 href={plan.link}
                                 className={`block w-full text-center py-5 rounded-2xl font-black text-xs uppercase tracking-widest transition-all ${plan.popular
-                                    ? 'bg-accent-cyan text-black shadow-[0_0_40px_rgba(34,211,238,0.3)] hover:scale-105 active:scale-95'
+                                    ? 'bg-accent-cyan text-white shadow-[0_0_40px_rgba(34,211,238,0.3)] hover:scale-105 active:scale-95'
                                     : 'bg-white/5 text-white hover:bg-white/10 border border-white/10'
                                     }`}
                             >

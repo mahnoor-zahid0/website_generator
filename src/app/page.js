@@ -10,7 +10,6 @@ import TemplateGrid from '@/components/user/TemplateGrid';
 import UniverseBackground from '@/components/user/UniverseBackground';
 import VirtualSection from '@/components/user/VirtualSection';
 import HowItWorks from '@/components/user/HowItWorks';
-import GeneratorForm from '@/components/user/GeneratorForm';
 import DashboardPreview from '@/components/user/DashboardPreview';
 
 export default function HomePage() {
@@ -53,11 +52,6 @@ export default function HomePage() {
         {/* Features / Capabilities */}
         <VirtualSection type="focus">
           <Features />
-        </VirtualSection>
-
-        {/* Generator Form Slab */}
-        <VirtualSection type="zoom">
-          <GeneratorForm />
         </VirtualSection>
 
         {/* Templates Grid with Parallax */}

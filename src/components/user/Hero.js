@@ -93,42 +93,43 @@ export default function Hero() {
                         Automated data mapping, structural precision, and one-click ZIP packaging.
                     </motion.p>
 
-                    {/* Left-Aligned Stats */}
-                    <motion.div
-                        variants={itemVariants}
-                        className="flex gap-12 border-t border-white/5 pt-12"
-                    >
-                        <div className="text-left">
-                            <div className="text-3xl font-black text-white">2k+</div>
-                            <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mt-2">Active Sites</div>
+                    {/* Row: Stats + Buttons */}
+                    <div className="flex flex-col xl:flex-row items-start xl:items-center gap-12 xl:gap-20 border-t border-white/5 pt-12 mt-4">
+                        {/* Stats Group */}
+                        <div className="flex gap-12">
+                            <div className="text-left">
+                                <div className="text-3xl font-black text-white">2k+</div>
+                                <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mt-2">Active Sites</div>
+                            </div>
+                            <div className="text-left">
+                                <div className="text-3xl font-black text-white">0.4s</div>
+                                <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mt-2">Load Speed</div>
+                            </div>
+                            <div className="text-left">
+                                <div className="text-3xl font-black text-white">99%</div>
+                                <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mt-2">Client Rank</div>
+                            </div>
                         </div>
-                        <div className="text-left">
-                            <div className="text-3xl font-black text-white">0.4s</div>
-                            <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mt-2">Load Speed</div>
-                        </div>
-                        <div className="text-left">
-                            <div className="text-3xl font-black text-white">99%</div>
-                            <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mt-2">Client Rank</div>
-                        </div>
-                    </motion.div>
+
+                        {/* CTA Buttons Group */}
+                        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-6">
+                            <Link href="#templates" className="group relative px-8 py-4 bg-accent-cyan text-white text-xs font-black uppercase tracking-widest rounded-2xl transition-all shadow-[0_0_40px_rgba(34,211,238,0.2)] hover:shadow-[0_0_60px_rgba(34,211,238,0.4)] hover:scale-105 active:scale-95">
+                                Start Building
+                            </Link>
+                            <Link href="#templates" className="px-8 py-4 glass-card text-white text-xs font-black uppercase tracking-widest rounded-2xl border-white/10 hover:bg-white/5 hover:border-white/20 transition-all">
+                                View Blueprints
+                            </Link>
+                        </motion.div>
+                    </div>
                 </motion.div>
 
-                {/* New Visual Component with Buttons */}
                 <motion.div
                     initial={{ opacity: 0, x: 50, rotateY: -20 }}
                     animate={{ opacity: 1, x: 0, rotateY: 0 }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    className="hidden lg:flex flex-col items-center gap-12"
+                    className="hidden lg:flex items-center justify-center pt-20"
                 >
                     <BlueprintDisplay />
-                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-8">
-                        <Link href="#templates" className="group relative px-12 py-5 bg-accent-cyan text-white font-extrabold rounded-2xl transition-all shadow-[0_0_40px_rgba(34,211,238,0.4)] hover:shadow-[0_0_60px_rgba(34,211,238,0.6)] hover:scale-110 active:scale-95">
-                            Start Building
-                        </Link>
-                        <Link href="#templates" className="px-12 py-5 glass-card text-white font-bold rounded-2xl border-white/10 hover:bg-white/5 hover:border-white/20 transition-all">
-                            View Blueprints
-                        </Link>
-                    </motion.div>
                 </motion.div>
 
                 {/* Mobile Buttons */}
