@@ -14,7 +14,7 @@ export default function GeneratorForm() {
     };
 
     return (
-        <section className="w-full bg-transparent py-24 relative overflow-hidden">
+        <section className="w-full bg-transparent py-12 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center perspective-1000" onMouseMove={handleMouseMove}>
 

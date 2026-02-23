@@ -33,7 +33,7 @@ export default function Pricing() {
     ];
 
     return (
-        <div id="pricing" className="w-full bg-transparent py-24 relative overflow-hidden">
+        <section className="w-full bg-transparent py-12 relative overflow-hidden px-6" id="pricing">
             <div className="max-w-7xl mx-auto px-4 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

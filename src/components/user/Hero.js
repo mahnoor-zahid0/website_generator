@@ -29,7 +29,7 @@ export default function Hero() {
     };
 
     return (
-        <div className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-transparent pt-32">
+        <div className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-transparent pt-16">
             {/* Background Decorative Elements */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <motion.div
@@ -92,11 +92,19 @@ export default function Hero() {
                         Transform concepts into professional high-performance interfaces instantly.
                         Automated data mapping, structural precision, and one-click ZIP packaging.
                     </motion.p>
+                </motion.div>
 
+                {/* New Visual Component with Buttons */}
+                <motion.div
+                    initial={{ opacity: 0, x: 50, rotateY: -20 }}
+                    animate={{ opacity: 1, x: 0, rotateY: 0 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className="hidden lg:flex flex-col items-center gap-12"
+                >
+                    <BlueprintDisplay />
                     <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-8">
-                        <Link href="#templates" className="group relative px-12 py-5 bg-accent-cyan text-black font-extrabold rounded-2xl transition-all shadow-[0_0_40px_rgba(34,211,238,0.4)] hover:shadow-[0_0_60px_rgba(34,211,238,0.6)] hover:scale-110 active:scale-95">
+                        <Link href="#templates" className="group relative px-12 py-5 bg-accent-cyan text-white font-extrabold rounded-2xl transition-all shadow-[0_0_40px_rgba(34,211,238,0.4)] hover:shadow-[0_0_60px_rgba(34,211,238,0.6)] hover:scale-110 active:scale-95">
                             Start Building
-                            <div className="absolute inset-x-0 bottom-0 h-1 bg-white/20 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                         </Link>
                         <Link href="#templates" className="px-12 py-5 glass-card text-white font-bold rounded-2xl border-white/10 hover:bg-white/5 hover:border-white/20 transition-all">
                             View Blueprints
@@ -104,14 +112,19 @@ export default function Hero() {
                     </motion.div>
                 </motion.div>
 
-                {/* New Visual Component */}
+                {/* Mobile Buttons */}
                 <motion.div
-                    initial={{ opacity: 0, x: 50, rotateY: -20 }}
-                    animate={{ opacity: 1, x: 0, rotateY: 0 }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                    className="hidden lg:block"
+                    variants={itemVariants}
+                    className="lg:hidden flex flex-col items-center gap-6 mt-12"
+                    initial="hidden"
+                    animate="visible"
                 >
-                    <BlueprintDisplay />
+                    <Link href="#templates" className="w-full text-center px-12 py-5 bg-accent-cyan text-white font-extrabold rounded-2xl transition-all shadow-[0_0_40px_rgba(34,211,238,0.4)] hover:scale-105">
+                        Start Building
+                    </Link>
+                    <Link href="#templates" className="w-full text-center px-12 py-5 glass-card text-white font-bold rounded-2xl border-white/10">
+                        View Blueprints
+                    </Link>
                 </motion.div>
             </div>
 

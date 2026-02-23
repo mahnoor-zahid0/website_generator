@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-transparent pt-32 pb-12 relative overflow-hidden">
+        <footer className="w-full bg-transparent pt-12 pb-12 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="glass-card p-12 rounded-[50px] border-white/5 flex flex-col md:flex-row items-center justify-between gap-12">
                     <div className="flex flex-col items-center md:items-start gap-4">

@@ -37,7 +37,7 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section className="w-full bg-transparent py-24 relative overflow-hidden">
+        <section className="w-full bg-transparent py-12 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export default function HowItWorks() {
                             className="relative group text-center"
                         >
                             <div className="relative mb-10 inline-block">
-                                <div className={`relative w-24 h-24 rounded-[30px] ${step.color} flex items-center justify-center text-black z-10 shadow-2xl transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110`}>
+                                <div className={`relative w-24 h-24 rounded-[30px] ${step.color} flex items-center justify-center text-white z-10 shadow-2xl transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110`}>
                                     {step.icon}
                                 </div>
                                 <div className={`absolute -inset-4 ${step.color.replace('bg-', 'bg-')}/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />

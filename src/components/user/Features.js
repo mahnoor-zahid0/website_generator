@@ -54,7 +54,7 @@ export default function Features() {
     ];
 
     return (
-        <section id="features" className="w-full bg-transparent py-24 relative overflow-hidden">
+        <section id="features" className="w-full bg-transparent py-12 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
