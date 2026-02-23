@@ -77,7 +77,7 @@ export default function Pricing() {
                                 }`}
                         >
                             {plan.popular && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-accent-cyan text-black text-[10px] font-black rounded-full uppercase tracking-widest shadow-[0_0_30px_rgba(34,211,238,0.4)]">
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-5 py-1.5 bg-accent-cyan text-white text-[10px] font-black rounded-full uppercase tracking-widest shadow-[0_0_30px_rgba(34,211,238,0.4)]">
                                     High Conversion
                                 </div>
                             )}

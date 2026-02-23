@@ -97,8 +97,16 @@ export default function Hero() {
             </div>
 
             {/* Full-Width Row: Stats + Buttons (Inside max-w-7xl) */}
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 mt-20">
-                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-12 border-t border-white/5 pt-12">
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="relative z-10 w-full max-w-7xl mx-auto px-6 mt-20"
+            >
+                <motion.div
+                    variants={itemVariants}
+                    className="flex flex-col lg:flex-row lg:items-center justify-between gap-12 border-t border-white/5 pt-12"
+                >
                     {/* Stats Group */}
                     <div className="flex gap-12">
                         <div className="text-left">
@@ -116,16 +124,16 @@ export default function Hero() {
                     </div>
 
                     {/* CTA Buttons Group */}
-                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-6">
+                    <div className="flex flex-col sm:flex-row items-center gap-6">
                         <Link href="#templates" className="group relative px-10 py-5 bg-accent-cyan text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-2xl transition-all shadow-[0_0_40px_rgba(34,211,238,0.2)] hover:shadow-[0_0_60px_rgba(34,211,238,0.4)] hover:scale-105 active:scale-95">
                             Start Building
                         </Link>
                         <Link href="#templates" className="px-10 py-5 glass-card text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-2xl border-white/10 hover:bg-white/5 hover:border-white/20 transition-all">
                             View Blueprints
                         </Link>
-                    </motion.div>
-                </div>
-            </div>
+                    </div>
+                </motion.div>
+            </motion.div>
 
             {/* Spacer for flow */}
             <div className="h-20" />
