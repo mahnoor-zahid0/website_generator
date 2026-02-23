@@ -43,6 +43,7 @@ export default function VirtualSection({
 
     return (
         <section
+            ref={containerRef}
             className={`relative ${fullHeight ? 'min-h-screen' : 'min-h-[60vh]'} flex flex-col items-center justify-center py-10 ${className}`}
             style={{ perspective: "2000px" }}
         >
