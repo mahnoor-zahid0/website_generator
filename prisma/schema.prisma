@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id            Int            @id @default(autoincrement())
+  name          String
+  email         String         @unique
+  password      String
+  role          Role           @default(REGULAR)
+  websites      Website[]
+  subscriptions Subscription[]
+  createdAt     DateTime       @default(now())
+}
+
+model Template {
+  id          Int      @id @default(autoincrement())
+  name        String
+  folderName  String
+  preview     String
+  category    String
+  premium     Boolean  @default(false)
+  enabled     Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  websites    Website[]
+}
+
+model Website {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  templateId Int
+  title      String
+  data        Json
+  zipPath     String
+  createdAt  DateTime @default(now())
+
+  user        User     @relation(fields: [userId], references: [id])
+  template    Template @relation(fields: [templateId], references: [id])
+}
+
+model Subscription {
+  id        Int       @id @default(autoincrement())
+  userId    Int
+  type      String    // FREE, PREMIUM
+  expiry    DateTime?
+  user      User      @relation(fields: [userId], references: [id])
+  createdAt DateTime  @default(now())
+}
+
+enum Role {
+  REGULAR
+  PREMIUM
+  ADMIN
+}

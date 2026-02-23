@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{name}} - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{name}}</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p class="lead">{{bio}}</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div>
+                    <h3>Skills</h3>
+                    <p>{{skills}}</p>
+                </div>
+                <div>
+                    <h3>Experience</h3>
+                    <p>{{experience}}</p>
+                </div>
+                <div>
+                    <h3>Education</h3>
+                    <p>{{education}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>Email: {{email}}</p>
+            <p>Phone: {{phone}}</p>
+            <p>Website: {{website}}</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 {{name}}. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
