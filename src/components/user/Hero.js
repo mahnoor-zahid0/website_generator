@@ -80,7 +80,6 @@ export default function Hero() {
                         variants={itemVariants}
                         className="text-7xl md:text-9xl font-bold text-white tracking-tighter mb-8 leading-[0.9] perspective-1000"
                     >
-                        <h3 className="text-4xl font-black text-white mb-12 tracking-tight italic">Design Your Perfect Site.</h3>
                         Generate Your <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan via-white to-accent-gold drop-shadow-[0_0_30px_rgba(34,211,238,0.2)]">Website in Seconds.</span>
                     </motion.h1>

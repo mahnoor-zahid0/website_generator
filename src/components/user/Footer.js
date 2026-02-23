@@ -18,7 +18,7 @@ export default function Footer() {
                             <span className="text-2xl font-black tracking-tighter text-white italic">Web<span className="text-accent-cyan">Gen</span></span>
                         </Link>
                         <p className="text-slate-500 text-xs font-medium max-w-[200px] text-center md:text-left leading-relaxed">
-                            description: "Our automation engine compiles everything into a ready-to-deploy ZIP archive.",cture.
+                            Elevating digital existence through automated architecture.
                         </p>
                     </div>
 
