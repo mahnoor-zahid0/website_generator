@@ -6,7 +6,7 @@ export default function BlueprintDisplay() {
     return (
         <div className="relative w-full h-[500px] flex items-center justify-center perspective-1000">
             {/* Stacked Blueprint Panels */}
-            <div className="relative w-[450px] h-[300px] preserve-3d">
+            <div className="relative w-full max-w-[450px] h-[300px] mx-auto lg:mx-0 preserve-3d">
                 {[...Array(3)].map((_, i) => (
                     <motion.div
                         key={i}

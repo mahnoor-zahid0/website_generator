@@ -34,7 +34,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#020617] text-white selection:bg-accent-cyan/30">
+    <div className="min-h-screen bg-[#020617] text-white selection:bg-accent-cyan/30 overflow-x-hidden">
       <UniverseBackground />
       <Navbar />
 
