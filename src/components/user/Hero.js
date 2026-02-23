@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import HolographicBuilder from './HolographicBuilder';
+import BlueprintDisplay from './BlueprintDisplay';
 
 export default function Hero() {
     const containerVariants = {
@@ -62,45 +62,56 @@ export default function Hero() {
                 />
             </div>
 
-            <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
+                    className="text-left"
                 >
                     <motion.div
                         variants={itemVariants}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-accent-cyan/30 text-accent-cyan text-[10px] font-bold uppercase tracking-[0.2em] mb-10 shadow-[0_0_20px_rgba(34,211,238,0.1)]"
                     >
                         <span className="w-2 h-2 rounded-full bg-accent-cyan animate-pulse"></span>
-                        Design Beyond Boundaries
+                        Architectural Excellence
                     </motion.div>
 
                     <motion.h1
                         variants={itemVariants}
-                        className="text-7xl md:text-9xl font-bold text-white tracking-tighter mb-8 leading-[0.9] perspective-1000"
+                        className="text-6xl md:text-8xl font-bold text-white tracking-tighter mb-8 leading-[0.9] perspective-1000"
                     >
-                        Generate Your <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan via-white to-accent-gold drop-shadow-[0_0_30px_rgba(34,211,238,0.2)]">Website in Seconds.</span>
+                        Scale Your Vision with <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan via-white to-accent-gold drop-shadow-[0_0_30px_rgba(34,211,238,0.2)]">Premium Templates.</span>
                     </motion.h1>
 
                     <motion.p
                         variants={itemVariants}
-                        className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-14 font-medium leading-relaxed"
+                        className="text-lg md:text-xl text-slate-400 max-w-xl mb-14 font-medium leading-relaxed"
                     >
-                        Transform your vision into a professional high-performance website instantly.
-                        Automated template design, structural coding, and one-click ZIP download.
+                        Transform concepts into professional high-performance interfaces instantly.
+                        Automated data mapping, structural precision, and one-click ZIP packaging.
                     </motion.p>
 
-                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-8">
+                    <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-8">
                         <Link href="#templates" className="group relative px-12 py-5 bg-accent-cyan text-black font-extrabold rounded-2xl transition-all shadow-[0_0_40px_rgba(34,211,238,0.4)] hover:shadow-[0_0_60px_rgba(34,211,238,0.6)] hover:scale-110 active:scale-95">
-                            Get Started
+                            Start Building
                             <div className="absolute inset-x-0 bottom-0 h-1 bg-white/20 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                         </Link>
                         <Link href="#templates" className="px-12 py-5 glass-card text-white font-bold rounded-2xl border-white/10 hover:bg-white/5 hover:border-white/20 transition-all">
-                            View Templates
+                            View Blueprints
                         </Link>
                     </motion.div>
+                </motion.div>
+
+                {/* New Visual Component */}
+                <motion.div
+                    initial={{ opacity: 0, x: 50, rotateY: -20 }}
+                    animate={{ opacity: 1, x: 0, rotateY: 0 }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    className="hidden lg:block"
+                >
+                    <BlueprintDisplay />
                 </motion.div>
             </div>
 

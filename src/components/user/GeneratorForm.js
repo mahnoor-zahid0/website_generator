@@ -23,10 +23,10 @@ export default function GeneratorForm() {
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="glass-card p-12 rounded-[40px] border-white/5 relative group"
+                        className="glass-card p-12 rounded-[40px] border-white/5 relative group max-w-2xl mx-auto lg:mx-0"
                     >
-                        <h2 className="text-xs font-bold text-accent-cyan uppercase tracking-[0.4em] mb-10">Configuration</h2>
-                        <h3 className="text-4xl font-black text-white mb-12 tracking-tight italic">Tell AI What to Build.</h3>
+                        <h2 className="text-xs font-bold text-accent-cyan uppercase tracking-[0.4em] mb-10">Configuration Suite</h2>
+                        <h3 className="text-4xl font-black text-white mb-12 tracking-tight italic">Design Your Perfect Site.</h3>
 
                         <form className="space-y-8">
                             <div className="space-y-3">
@@ -55,7 +55,7 @@ export default function GeneratorForm() {
                                     </div>
                                 </div>
                                 <div className="space-y-3">
-                                    <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest pl-2">Features</label>
+                                    <label className="text-[10px] font-black text-slate-500 uppercase tracking-widest pl-2">Template Features</label>
                                     <div className="flex bg-white/5 p-1 rounded-xl border border-white/10">
                                         <button type="button" className="flex-1 py-2 text-[10px] font-black uppercase tracking-tighter bg-accent-cyan text-black rounded-lg">Full Stack</button>
                                         <button type="button" className="flex-1 py-2 text-[10px] font-black uppercase tracking-tighter text-slate-400">Static</button>
@@ -64,16 +64,16 @@ export default function GeneratorForm() {
                             </div>
 
                             <button type="submit" className="w-full py-5 bg-white text-black font-black uppercase tracking-widest rounded-2xl shadow-[0_0_30px_rgba(255,255,255,0.2)] hover:scale-[1.02] active:scale-[0.98] transition-all">
-                                Generate Payload
+                                Build ZIP Package
                             </button>
                         </form>
                     </motion.div>
 
-                    {/* Live Preview Side (Interactive Tilt) */}
+                    {/* Blueprint Preview Side (Static & Professional) */}
                     <motion.div
                         style={{
-                            rotateY: mousePos.x * 20,
-                            rotateX: -mousePos.y * 20,
+                            rotateY: mousePos.x * 10,
+                            rotateX: -mousePos.y * 10,
                             translateZ: 50
                         }}
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -83,47 +83,39 @@ export default function GeneratorForm() {
                     >
                         <div className="absolute -inset-10 bg-accent-cyan/10 blur-[150px] rounded-full pointer-events-none" />
 
-                        {/* Mock UI Preview */}
+                        {/* Professional UI Blueprint */}
                         <div className="glass-card w-full h-[600px] rounded-[50px] border-white/10 overflow-hidden relative shadow-2xl">
                             <div className="p-8 border-b border-white/5 flex items-center justify-between">
-                                <div className="flex gap-2">
-                                    <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                                    <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                                    <div className="w-3 h-3 rounded-full bg-green-500/50" />
-                                </div>
+                                <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Blueprint v2.4</div>
                                 <div className="h-6 w-1/2 bg-white/5 rounded-full" />
                             </div>
 
                             <div className="p-12 space-y-10">
-                                <div className="space-y-4">
-                                    <div className="h-20 w-3/4 bg-white/10 rounded-3xl" />
-                                    <div className="h-4 w-1/2 bg-white/5 rounded-full" />
-                                </div>
-                                <div className="grid grid-cols-2 gap-8">
-                                    <div className="h-40 bg-accent-cyan/10 rounded-3xl border border-accent-cyan/20 flex items-center justify-center">
-                                        <div className="w-12 h-12 bg-accent-cyan/20 rounded-full animate-pulse blur-xl" />
+                                <div className="flex gap-4">
+                                    <div className="w-16 h-16 bg-accent-cyan/20 rounded-2xl" />
+                                    <div className="space-y-2 flex-1">
+                                        <div className="h-4 w-3/4 bg-white/10 rounded-full" />
+                                        <div className="h-3 w-1/2 bg-white/5 rounded-full" />
                                     </div>
-                                    <div className="h-40 bg-white/5 rounded-3xl" />
                                 </div>
-                                <div className="h-32 bg-white/5 rounded-3xl" />
+                                <div className="grid grid-cols-3 gap-4">
+                                    {[1, 2, 3].map(i => (
+                                        <div key={i} className="h-24 bg-white/5 rounded-xl border border-white/5" />
+                                    ))}
+                                </div>
+                                <div className="h-40 bg-white/5 rounded-3xl relative overflow-hidden">
+                                    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-accent-cyan/5 to-transparent" />
+                                </div>
                             </div>
                         </div>
 
-                        {/* Floating elements attached to preview */}
+                        {/* Verification Tag */}
                         <motion.div
-                            animate={{ y: [-10, 10, -10] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -right-12 top-20 w-48 p-6 glass-card rounded-3xl border-accent-cyan/20 shadow-2xl"
+                            animate={{ y: [-5, 5, -5] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute -right-6 top-1/2 -translate-y-1/2 bg-accent-cyan text-black px-6 py-3 rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-2xl"
                         >
-                            <div className="text-[10px] font-black text-accent-cyan uppercase mb-2">Live Status</div>
-                            <div className="text-xl font-bold text-white">Compiling...</div>
-                            <div className="mt-4 h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                                <motion.div
-                                    animate={{ width: ['0%', '100%'] }}
-                                    transition={{ duration: 2, repeat: Infinity }}
-                                    className="h-full bg-accent-cyan"
-                                />
-                            </div>
+                            Validated
                         </motion.div>
                     </motion.div>
 
